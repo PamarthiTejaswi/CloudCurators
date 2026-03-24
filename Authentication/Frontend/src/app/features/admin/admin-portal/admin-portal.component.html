@@ -1,0 +1,246 @@
+<app-navbar></app-navbar>
+
+<div class="admin-container">
+  <div class="admin-header">
+    <h1>&#9881; Admin Portal</h1>
+    <p>Manage hotels, rooms, and users</p>
+  </div>
+
+  <div class="tabs-navigation">
+    <button class="tab-button" [class.active]="activeTab() === 'hotels'"
+            (click)="activeTab.set('hotels')">
+      &#x1F3E8; Hotels
+    </button>
+    <button class="tab-button" [class.active]="activeTab() === 'rooms'"
+            (click)="activeTab.set('rooms')">
+      &#x1F6AA; Rooms
+    </button>
+    <button class="tab-button" [class.active]="activeTab() === 'users'"
+            (click)="activeTab.set('users')">
+      &#x1F465; Users
+    </button>
+  </div>
+
+  <div class="admin-content">
+    <div class="tab-content" *ngIf="activeTab() === 'hotels'">
+      <div class="section-header">
+        <h2>Hotel Management</h2>
+        <button class="add-button" (click)="openHotelForm()">
+          + Add Hotel
+        </button>
+      </div>
+
+      <div class="loading-state" *ngIf="hotelsLoading()">
+        <div class="spinner"></div>
+        <p>Loading hotels...</p>
+      </div>
+
+      <div class="empty-state" *ngIf="!hotelsLoading() && hotels().length === 0">
+        <p>No hotels yet. Create one to get started!</p>
+      </div>
+
+      <div class="table-container" *ngIf="!hotelsLoading() && hotels().length > 0">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Description</th>
+              <th>Amenities</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let hotel of hotels()">
+              <td>{{ hotel.name }}</td>
+              <td>{{ hotel.location }}</td>
+              <td>{{ hotel.description }}</td>
+              <td>{{ hotel.amenities }}</td>
+              <td class="actions">
+                <button class="btn-edit" (click)="openHotelForm(hotel)">Edit</button>
+                <button class="btn-delete" (click)="deleteHotel(hotel.id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-overlay" *ngIf="showHotelForm()" (click)="showHotelForm.set(false)">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+          <div class="modal-header">
+            <h3>{{ editingHotel() ? 'Edit Hotel' : 'Create New Hotel' }}</h3>
+            <button class="close-btn" (click)="showHotelForm.set(false)">X</button>
+          </div>
+
+          <form [formGroup]="hotelForm" (ngSubmit)="saveHotel()" class="admin-form">
+            <div class="form-group">
+              <label>Hotel Name</label>
+              <input type="text" formControlName="name" placeholder="e.g., Grand Hotel">
+            </div>
+
+            <div class="form-group">
+              <label>Location</label>
+              <input type="text" formControlName="location" placeholder="e.g., New York, USA">
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              <textarea formControlName="description" placeholder="Hotel description" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Amenities</label>
+              <input type="text" formControlName="amenities" placeholder="Pool, WiFi, Restaurant">
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-cancel" (click)="showHotelForm.set(false)">Cancel</button>
+              <button type="submit" class="btn-submit">{{ editingHotel() ? 'Update' : 'Create' }} Hotel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" *ngIf="activeTab() === 'rooms'">
+      <div class="section-header">
+        <h2>Room Management</h2>
+        <button class="add-button" (click)="openRoomForm()" [disabled]="!selectedHotelForRooms()">
+          + Add Room
+        </button>
+      </div>
+
+      <div class="hotel-selector">
+        <label>Select Hotel:</label>
+        <select [(ngModel)]="selectedHotelForRoomsValue"
+                (ngModelChange)="loadRoomsForHotel($event)"
+                class="select-input">
+          <option value="">-- Choose a hotel --</option>
+          <option *ngFor="let hotel of hotels()" [value]="hotel.id">
+            {{ hotel.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="loading-state" *ngIf="roomsLoading()">
+        <div class="spinner"></div>
+        <p>Loading rooms...</p>
+      </div>
+
+      <div class="empty-state" *ngIf="!roomsLoading() && rooms().length === 0 && selectedHotelForRooms()">
+        <p>No rooms for this hotel yet.</p>
+      </div>
+
+      <div class="table-container" *ngIf="!roomsLoading() && rooms().length > 0">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Room Type</th>
+              <th>Price/Night</th>
+              <th>Total Rooms</th>
+              <th>Max Guests</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let room of rooms()">
+              <td>{{ room.roomType }}</td>
+              <td>${{ room.pricePerNight }}</td>
+              <td>{{ room.totalRooms }}</td>
+              <td>{{ room.maxGuests }}</td>
+              <td class="actions">
+                <button class="btn-edit" (click)="openRoomForm(room)">Edit</button>
+                <button class="btn-delete" (click)="deleteRoom(room.id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-overlay" *ngIf="showRoomForm()" (click)="showRoomForm.set(false)">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+          <div class="modal-header">
+            <h3>{{ editingRoom() ? 'Edit Room' : 'Create New Room' }}</h3>
+            <button class="close-btn" (click)="showRoomForm.set(false)">X</button>
+          </div>
+
+          <form [formGroup]="roomForm" (ngSubmit)="saveRoom()" class="admin-form">
+            <div class="form-group">
+              <label>Room Type</label>
+              <input type="text" formControlName="roomType" placeholder="e.g., Deluxe">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Price Per Night ($)</label>
+                <input type="number" formControlName="pricePerNight" min="0" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label>Total Rooms</label>
+                <input type="number" formControlName="totalRooms" min="1" placeholder="0">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Max Guests</label>
+              <input type="number" formControlName="maxGuests" min="1" placeholder="0">
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-cancel" (click)="showRoomForm.set(false)">Cancel</button>
+              <button type="submit" class="btn-submit">{{ editingRoom() ? 'Update' : 'Create' }} Room</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" *ngIf="activeTab() === 'users'">
+      <div class="section-header">
+        <h2>User Management</h2>
+        <div class="search-box">
+          <input type="text"
+                 class="search-input"
+                 placeholder="Search by username or email..."
+                 [(ngModel)]="searchUserQueryValue"
+                 (input)="searchUsers()">
+          <span class="search-icon">&#x1F50D;</span>
+        </div>
+      </div>
+
+      <div class="loading-state" *ngIf="usersLoading()">
+        <div class="spinner"></div>
+        <p>Loading users...</p>
+      </div>
+
+      <div class="empty-state" *ngIf="!usersLoading() && filteredUsers().length === 0">
+        <p>No users found.</p>
+      </div>
+
+      <div class="table-container" *ngIf="!usersLoading() && filteredUsers().length > 0">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Joined</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of filteredUsers()">
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.createdAt | date:'short' }}</td>
+              <td class="actions">
+                <button class="btn-delete" (click)="deleteUser(user.id)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

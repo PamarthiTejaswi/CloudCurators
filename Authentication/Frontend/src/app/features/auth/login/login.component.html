@@ -1,0 +1,152 @@
+<div class="login-container">
+  <div class="login-background">
+    <div class="gradient-circle circle-1"></div>
+    <div class="gradient-circle circle-2"></div>
+    <div class="gradient-circle circle-3"></div>
+  </div>
+
+  <div class="login-wrapper">
+    <div class="login-box">
+      <div class="login-header">
+        <button class="back-btn" (click)="navigateToHome()" title="Back to home">
+          &larr; Back
+        </button>
+        <div class="header-content">
+          <span class="logo-icon">&#x1F3E8;</span>
+          <h1>HotelHub</h1>
+        </div>
+      </div>
+
+      <div class="card login-card">
+        <h2 class="card-title">Welcome Back</h2>
+        <p class="card-subtitle">Sign in to your account to continue</p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <div class="input-wrapper">
+              <span class="input-icon">&#x2709;</span>
+              <input
+                id="email"
+                type="email"
+                class="form-input"
+                placeholder="Enter your email"
+                formControlName="email"
+                [class.error]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+              />
+            </div>
+            <div
+              class="error-message"
+              *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+            >
+              <span *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</span>
+              <span *ngIf="loginForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">&#x1F512;</span>
+              <input
+                id="password"
+                [type]="showPassword() ? 'text' : 'password'"
+                class="form-input"
+                placeholder="Enter your password"
+                formControlName="password"
+                [class.error]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                (click)="togglePasswordVisibility()"
+                [title]="showPassword() ? 'Hide password' : 'Show password'"
+              >
+                {{ showPassword() ? 'Hide' : 'Show' }}
+              </button>
+            </div>
+            <div
+              class="error-message"
+              *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+            >
+              <span *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</span>
+              <span *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters</span>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <label class="remember-me">
+              <input
+                type="checkbox"
+                [checked]="rememberMe()"
+                (change)="rememberMe.set(!rememberMe())"
+              />
+              <span>Remember my email</span>
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+
+          <button
+            type="submit"
+            class="submit-button"
+            [disabled]="isLoading()"
+          >
+            <span *ngIf="!isLoading()" class="button-text">Sign In</span>
+            <span *ngIf="isLoading()" class="button-spinner">
+              <span class="spinner"></span> Signing in...
+            </span>
+          </button>
+        </form>
+
+        <div class="divider">
+          <span>Or continue with</span>
+        </div>
+
+        <div class="social-login">
+          <button class="social-btn google-btn" type="button">
+            <span class="social-icon">G</span>
+            <span>Google</span>
+          </button>
+          <button class="social-btn github-btn" type="button">
+            <span class="social-icon">GH</span>
+            <span>GitHub</span>
+          </button>
+        </div>
+
+        <p class="signup-link">
+          Don't have an account?
+          <a href="#" (click)="navigateToRegister(); $event.preventDefault()">Create one</a>
+        </p>
+      </div>
+
+      <div class="security-notice">
+        <span class="notice-icon">&#x1F512;</span>
+        <p>Your login information is secured with end-to-end encryption</p>
+      </div>
+    </div>
+
+    <div class="illustration-container">
+      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" class="login-illustration">
+        <defs>
+          <linearGradient id="hotelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+          </linearGradient>
+        </defs>
+        <rect x="50" y="80" width="200" height="200" fill="url(#hotelGrad)" rx="15"/>
+        <rect x="70" y="100" width="25" height="25" fill="#fbbf24" rx="4"/>
+        <rect x="130" y="100" width="25" height="25" fill="#fbbf24" rx="4"/>
+        <rect x="190" y="100" width="25" height="25" fill="#fbbf24" rx="4"/>
+        <rect x="70" y="165" width="25" height="25" fill="#3b82f6" rx="4"/>
+        <rect x="130" y="165" width="25" height="25" fill="#fbbf24" rx="4"/>
+        <rect x="190" y="165" width="25" height="25" fill="#3b82f6" rx="4"/>
+        <rect x="70" y="230" width="25" height="25" fill="#fbbf24" rx="4"/>
+        <rect x="130" y="230" width="25" height="25" fill="#3b82f6" rx="4"/>
+        <rect x="190" y="230" width="25" height="25" fill="#fbbf24" rx="4"/>
+        <rect x="135" y="270" width="30" height="50" fill="#92400e" rx="4"/>
+        <circle cx="160" cy="295" r="2" fill="#fbbf24"/>
+        <polygon points="150,60 150,80 175,70" fill="#3b82f6"/>
+      </svg>
+    </div>
+  </div>
+</div>

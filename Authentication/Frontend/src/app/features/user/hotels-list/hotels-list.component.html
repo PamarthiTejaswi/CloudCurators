@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <div class="header-content">
+      <h1>&#x1F3E8; Discover Hotels</h1>
+      <p>Find the perfect place for your next stay</p>
+    </div>
+  </div>
+
+  <div class="search-section">
+    <div class="search-wrapper">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search hotels by name or location..."
+        [(ngModel)]="searchQueryValue"
+        (input)="searchHotels()"
+      />
+      <span class="search-icon">&#x1F50D;</span>
+    </div>
+  </div>
+
+  <div class="loading-state" *ngIf="isLoading()">
+    <div class="spinner"></div>
+    <p>Loading hotels...</p>
+  </div>
+
+  <div class="empty-state" *ngIf="!isLoading() && filteredHotels().length === 0">
+    <div class="empty-icon">&#x1F3E8;</div>
+    <h2>No Hotels Found</h2>
+    <p>Try adjusting your search criteria</p>
+  </div>
+
+  <div class="hotels-grid" *ngIf="!isLoading() && filteredHotels().length > 0">
+    <div class="hotel-card" *ngFor="let hotel of filteredHotels()" (click)="viewHotelDetails(hotel)">
+      <div class="hotel-image">
+        <img [src]="'data:image/svg+xml;utf8,' + encodeUri(hotel.image || '<svg></svg>')"
+             [alt]="hotel.name"
+             onerror="this.setAttribute('data-error','true')" />
+        <div class="hotel-image-fallback" *ngIf="!hotel.image || !hotel.image.startsWith('data')">
+          <span class="building-emoji">&#x1F3E8;</span>
+        </div>
+      </div>
+
+      <div class="hotel-content">
+        <h3 class="hotel-name">{{ hotel.name }}</h3>
+        <p class="hotel-location">&#x1F4CD; {{ getLocation(hotel) }}</p>
+
+        <p class="hotel-description">{{ hotel.description | slice:0:100 }}...</p>
+
+        <div class="hotel-amenities">
+          <span class="amenity" *ngFor="let amenity of getAmenities(hotel) | slice:0:3">
+            {{ amenity }}
+          </span>
+          <span class="more-amenities" *ngIf="getAmenities(hotel).length > 3">
+            +{{ getAmenities(hotel).length - 3 }} more
+          </span>
+        </div>
+
+        <div class="hotel-footer">
+          <button class="book-btn" (click)="bookHotel(hotel); $event.stopPropagation()">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" *ngIf="showDetails()" (click)="closeDetails()">
+  <div class="modal-content" (click)="$event.stopPropagation()" *ngIf="selectedHotel()">
+    <button class="close-btn" (click)="closeDetails()">X</button>
+
+    <h2>{{ selectedHotel()?.name }}</h2>
+    <p class="modal-location">&#x1F4CD; {{ selectedHotel()?.location }}</p>
+
+    <div class="modal-section">
+      <h3>About</h3>
+      <p>{{ selectedHotel()?.description }}</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Location</h3>
+      <p>{{ selectedHotel()?.location }}</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Amenities</h3>
+      <div class="amenities-list">
+        <span class="amenity-badge" *ngFor="let amenity of getAmenities(selectedHotel()!)">
+          {{ amenity }}
+        </span>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="modal-book-btn" (click)="bookHotel(selectedHotel()!); closeDetails()">
+        Book This Hotel
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,224 @@
+<div class="register-container">
+  <div class="register-background">
+    <div class="gradient-circle circle-1"></div>
+    <div class="gradient-circle circle-2"></div>
+    <div class="gradient-circle circle-3"></div>
+  </div>
+
+  <div class="register-wrapper">
+    <div class="register-box">
+      <div class="register-header">
+        <button class="back-btn" (click)="navigateToHome()" title="Back to home">
+          &larr; Back
+        </button>
+        <div class="header-content">
+          <span class="logo-icon">&#x1F3E8;</span>
+          <h1>HotelHub</h1>
+        </div>
+      </div>
+
+      <div class="card register-card">
+        <h2 class="card-title">Create Account</h2>
+        <p class="card-subtitle">Join HotelHub and start your journey</p>
+
+        <div class="role-selection">
+          <label class="role-option" [class.active]="selectedRole() === 'User'">
+            <input type="radio" name="role" value="User" [checked]="selectedRole() === 'User'"
+                   (change)="selectedRole.set('User')" />
+            <span class="role-label">
+              <span class="role-icon">&#x1F464;</span>
+              <span>Guest</span>
+            </span>
+          </label>
+          <label class="role-option" [class.active]="selectedRole() === 'Admin'">
+            <input type="radio" name="role" value="Admin" [checked]="selectedRole() === 'Admin'"
+                   (change)="selectedRole.set('Admin')" />
+            <span class="role-label">
+              <span class="role-icon">&#x1F4BC;</span>
+              <span>Admin</span>
+            </span>
+          </label>
+        </div>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <div class="input-wrapper">
+              <span class="input-icon">&#x1F464;</span>
+              <input
+                id="username"
+                type="text"
+                class="form-input"
+                placeholder="Choose a username"
+                formControlName="username"
+                [class.error]="registerForm.get('username')?.invalid && registerForm.get('username')?.touched"
+              />
+            </div>
+            <div class="error-message"
+              *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched">
+              <span *ngIf="registerForm.get('username')?.errors?.['required']">Username is required</span>
+              <span *ngIf="registerForm.get('username')?.errors?.['minlength']">Username must be at least 3 characters</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <div class="input-wrapper">
+              <span class="input-icon">&#x2709;</span>
+              <input
+                id="email"
+                type="email"
+                class="form-input"
+                placeholder="Enter your email"
+                formControlName="email"
+                [class.error]="registerForm.get('email')?.invalid && registerForm.get('email')?.touched"
+              />
+            </div>
+            <div class="error-message"
+              *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+              <span *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</span>
+              <span *ngIf="registerForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">&#x1F512;</span>
+              <input
+                id="password"
+                [type]="showPassword() ? 'text' : 'password'"
+                class="form-input"
+                placeholder="Create a strong password"
+                formControlName="password"
+                (input)="calculatePasswordStrength()"
+                [class.error]="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                (click)="togglePasswordVisibility()"
+                [title]="showPassword() ? 'Hide password' : 'Show password'"
+              >
+                {{ showPassword() ? 'Hide' : 'Show' }}
+              </button>
+            </div>
+
+            <div class="password-strength" *ngIf="registerForm.get('password')?.value">
+              <div class="strength-label">
+                <span>Password Strength:</span>
+                <span class="strength-text" [style.color]="getStrengthColor()">
+                  {{ getStrengthLabel() }}
+                </span>
+              </div>
+              <div class="strength-bars">
+                <div class="strength-bar" *ngFor="let i of [1, 2, 3, 4, 5]"
+                     [class.active]="i <= passwordStrength()"
+                     [style.backgroundColor]="i <= passwordStrength() ? getStrengthColor() : 'transparent'">
+                </div>
+              </div>
+              <ul class="password-tips">
+                <li [class.met]="hasMinLength()">
+                  &#10003; At least 6 characters
+                </li>
+                <li [class.met]="hasUpperAndLower()">
+                  &#10003; Mix of uppercase and lowercase
+                </li>
+                <li [class.met]="hasNumber()">
+                  &#10003; Contains numbers
+                </li>
+                <li [class.met]="hasSpecial()">
+                  &#10003; Contains special characters
+                </li>
+              </ul>
+            </div>
+
+            <div class="error-message"
+              *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+              <span *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</span>
+              <span *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">&#x1F512;</span>
+              <input
+                id="confirmPassword"
+                [type]="showConfirmPassword() ? 'text' : 'password'"
+                class="form-input"
+                placeholder="Confirm your password"
+                formControlName="confirmPassword"
+                [class.error]="(registerForm.get('confirmPassword')?.invalid || registerForm.errors?.['passwordMismatch']) && registerForm.get('confirmPassword')?.touched"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                (click)="toggleConfirmPasswordVisibility()"
+                [title]="showConfirmPassword() ? 'Hide password' : 'Show password'"
+              >
+                {{ showConfirmPassword() ? 'Hide' : 'Show' }}
+              </button>
+            </div>
+            <div class="error-message"
+              *ngIf="(registerForm.get('confirmPassword')?.invalid || registerForm.errors?.['passwordMismatch']) && registerForm.get('confirmPassword')?.touched">
+              <span *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Please confirm your password</span>
+              <span *ngIf="registerForm.errors?.['passwordMismatch']">Passwords do not match</span>
+            </div>
+          </div>
+
+          <label class="terms-checkbox">
+            <input type="checkbox" required />
+            <span>I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a></span>
+          </label>
+
+          <button
+            type="submit"
+            class="submit-button"
+            [disabled]="isLoading() || registerForm.invalid"
+          >
+            <span *ngIf="!isLoading()" class="button-text">Create Account</span>
+            <span *ngIf="isLoading()" class="button-spinner">
+              <span class="spinner"></span> Creating...
+            </span>
+          </button>
+        </form>
+
+        <p class="login-link">
+          Already have an account?
+          <a href="#" (click)="navigateToLogin(); $event.preventDefault()">Sign in</a>
+        </p>
+      </div>
+
+      <div class="security-notice">
+        <span class="notice-icon">&#x1F512;</span>
+        <p>Your data is encrypted and secure. We never share your information.</p>
+      </div>
+    </div>
+
+    <div class="illustration-container">
+      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" class="register-illustration">
+        <defs>
+          <linearGradient id="regGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.8" />
+          </linearGradient>
+        </defs>
+        <rect x="50" y="80" width="200" height="200" fill="url(#regGrad)" rx="15"/>
+        <circle cx="85" cy="115" r="12" fill="#fbbf24"/>
+        <circle cx="150" cy="115" r="12" fill="#fbbf24"/>
+        <circle cx="215" cy="115" r="12" fill="#fbbf24"/>
+        <circle cx="85" cy="180" r="12" fill="#3b82f6"/>
+        <circle cx="150" cy="180" r="12" fill="#fbbf24"/>
+        <circle cx="215" cy="180" r="12" fill="#3b82f6"/>
+        <circle cx="85" cy="245" r="12" fill="#fbbf24"/>
+        <circle cx="150" cy="245" r="12" fill="#3b82f6"/>
+        <circle cx="215" cy="245" r="12" fill="#fbbf24"/>
+        <rect x="135" y="270" width="30" height="50" fill="#92400e" rx="4"/>
+        <circle cx="160" cy="295" r="2" fill="#fbbf24"/>
+        <circle cx="150" cy="60" r="8" fill="#ec4899"/>
+      </svg>
+    </div>
+  </div>
+</div>

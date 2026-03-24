@@ -1,0 +1,168 @@
+<div class="landing-container">
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <span class="logo-icon">&#x1F3E8;</span>
+        <span class="logo-text">HotelHub</span>
+      </div>
+      <div class="nav-buttons">
+        <button class="nav-btn login-btn" (click)="navigateToLogin()">Login</button>
+        <button class="nav-btn register-btn" (click)="navigateToRegister()">Register</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Discover Your Perfect Stay</h1>
+      <p class="hero-subtitle">Find and book the most beautiful hotels around the world</p>
+      <button class="cta-button" (click)="navigateToLogin()">Start Exploring</button>
+    </div>
+    <div class="hero-image">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="hotel-illustration">
+        <defs>
+          <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect x="80" y="120" width="240" height="220" fill="url(#buildingGradient)" rx="10"/>
+        <rect x="100" y="140" width="30" height="30" fill="#fbbf24" rx="5"/>
+        <rect x="155" y="140" width="30" height="30" fill="#fbbf24" rx="5"/>
+        <rect x="210" y="140" width="30" height="30" fill="#fbbf24" rx="5"/>
+        <rect x="265" y="140" width="30" height="30" fill="#fbbf24" rx="5"/>
+
+        <rect x="100" y="190" width="30" height="30" fill="#fbbf24" rx="5"/>
+        <rect x="155" y="190" width="30" height="30" fill="#3b82f6" rx="5"/>
+        <rect x="210" y="190" width="30" height="30" fill="#fbbf24" rx="5"/>
+        <rect x="265" y="190" width="30" height="30" fill="#3b82f6" rx="5"/>
+
+        <rect x="100" y="240" width="30" height="30" fill="#3b82f6" rx="5"/>
+        <rect x="155" y="240" width="30" height="30" fill="#fbbf24" rx="5"/>
+        <rect x="210" y="240" width="30" height="30" fill="#3b82f6" rx="5"/>
+        <rect x="265" y="240" width="30" height="30" fill="#fbbf24" rx="5"/>
+
+        <rect x="180" y="300" width="40" height="60" fill="#92400e" rx="5"/>
+        <circle cx="215" cy="330" r="3" fill="#fbbf24"/>
+
+        <polygon points="80,120 200,50 320,120" fill="#ec4899"/>
+
+        <rect x="195" y="30" width="10" height="30" fill="#78350f"/>
+        <polygon points="205,35 205,50 230,42" fill="#3b82f6"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2 class="section-title">Why Choose HotelHub?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F50D;</div>
+        <h3>Easy Search</h3>
+        <p>Find hotels in any city with advanced filters and sorting options</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F4B0;</div>
+        <h3>Best Prices</h3>
+        <p>Get the best deals with our price comparison and exclusive offers</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9733;</div>
+        <h3>Top Rated</h3>
+        <p>Browse hotels with verified guest reviews and ratings</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F6E1;</div>
+        <h3>Secure Booking</h3>
+        <p>Your reservations are protected with our secure booking system</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F4F1;</div>
+        <h3>Mobile Friendly</h3>
+        <p>Book hotels on the go with our responsive mobile design</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F30D;</div>
+        <h3>Worldwide Coverage</h3>
+        <p>Access thousands of hotels across the globe</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Create Account</h3>
+        <p>Sign up as a guest or admin</p>
+      </div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Browse Hotels</h3>
+        <p>Explore available properties</p>
+      </div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Book Your Stay</h3>
+        <p>Select dates and complete booking</p>
+      </div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Enjoy</h3>
+        <p>Have an amazing experience</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Find Your Perfect Hotel?</h2>
+      <p>Join thousands of happy travelers booking with HotelHub</p>
+      <button class="cta-button large" (click)="navigateToLogin()">Get Started Now</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About HotelHub</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" class="social-icon">f</a>
+          <a href="#" class="social-icon">&#x1F426;</a>
+          <a href="#" class="social-icon">&#x1F4F7;</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 HotelHub. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
