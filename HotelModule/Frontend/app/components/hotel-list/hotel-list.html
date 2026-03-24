@@ -1,0 +1,40 @@
+<div class="hotel-list-container">
+  <div class="hotel-list-header">
+    <h2>Hotel Search</h2>
+  </div>
+
+  <!-- 🔍 SEARCH SECTION -->
+  <div class="search-section">
+    <input 
+      [(ngModel)]="searchQuery" 
+      placeholder="Search by ID, Name, or Location"
+      (keyup.enter)="search()">
+
+    <button (click)="search()" class="search-btn">Search</button>
+    <button (click)="loadHotels()" class="reset-btn">Reset</button>
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="isLoading" class="loading-message">
+    <div class="spinner"></div>
+    <p>Loading hotels...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="errorMessage && !isLoading" class="error-message">
+    <span class="error-icon">⚠️</span>
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="hotels.length === 0 && !isLoading && !errorMessage" class="empty-message">
+    <p>No hotels available. Try searching or adding a new hotel!</p>
+  </div>
+
+  <!-- HOTEL LIST -->
+  <div *ngFor="let hotel of hotels" class="card">
+    <h3>{{hotel.name}}</h3>
+    <p>{{hotel.location}}</p>
+  </div>
+  
+</div>
