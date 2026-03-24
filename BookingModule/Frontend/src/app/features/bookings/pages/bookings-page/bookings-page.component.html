@@ -1,0 +1,42 @@
+<section class="page-grid">
+  <article class="form-card">
+    <app-booking-form
+      [form]="form"
+      [isSubmitting]="isSubmitting()"
+      (submitBooking)="submitBooking($event)"
+    />
+
+    @if (errorMessage()) {
+      <div class="error-panel">
+        <strong>Save failed</strong>
+        <p>{{ errorMessage() }}</p>
+      </div>
+    }
+
+    @if (createdBooking(); as booking) {
+      <div class="success-panel">
+        <h3>Latest booking request</h3>
+        <p>Room {{ booking.roomId }} booking request has been captured.</p>
+        <strong>Status: {{ booking.status }}</strong>
+
+        <button class="details-button" type="button" (click)="toggleBookingDetails()">
+          {{ showBookingDetails() ? 'Hide Details' : 'View Details' }}
+        </button>
+
+        @if (showBookingDetails()) {
+          <div class="booking-details">
+            <p><strong>Booking Id:</strong> {{ booking.bookingId }}</p>
+            <p><strong>Room Id:</strong> {{ booking.roomId }}</p>
+            <p>
+              <strong>Price:</strong>
+              {{ booking.totalAmount | currency: 'INR' : 'symbol' : '1.0-0' }}
+            </p>
+            <p><strong>From:</strong> {{ booking.fromDate | date: 'medium' }}</p>
+            <p><strong>To:</strong> {{ booking.toDate | date: 'medium' }}</p>
+            <p><strong>Status:</strong> {{ booking.status }}</p>
+          </div>
+        }
+      </div>
+    }
+  </article>
+</section>

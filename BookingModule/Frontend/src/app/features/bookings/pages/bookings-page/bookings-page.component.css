@@ -1,0 +1,55 @@
+.page-grid {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.form-card {
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  background: var(--color-surface);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-soft);
+}
+
+.success-panel {
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  background: rgba(47, 125, 98, 0.1);
+  border: 1px solid rgba(47, 125, 98, 0.2);
+}
+
+.error-panel {
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  background: rgba(180, 58, 58, 0.08);
+  border: 1px solid rgba(180, 58, 58, 0.2);
+  color: #7a1d1d;
+}
+
+.error-panel p,
+.error-panel strong,
+.success-panel p,
+.success-panel strong {
+  margin: 0;
+}
+
+.details-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.2rem;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  cursor: pointer;
+}
+
+.booking-details {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(47, 125, 98, 0.2);
+}

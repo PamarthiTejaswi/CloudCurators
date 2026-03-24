@@ -1,0 +1,31 @@
+<form class="booking-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="field-grid">
+    <label class="field">
+      <span>Room Id</span>
+      <input type="number" formControlName="roomId" min="1" placeholder="Enter room id" />
+    </label>
+
+    <label class="field">
+      <span>Price Per Night</span>
+      <input type="number" formControlName="pricePerNight" min="1" />
+    </label>
+
+    <label class="field">
+      <span>From Date</span>
+      <input type="datetime-local" formControlName="fromDate" step="1" />
+    </label>
+
+    <label class="field">
+      <span>To Date</span>
+      <input type="datetime-local" formControlName="toDate" step="1" />
+    </label>
+  </div>
+
+  @if (form.hasError('invalidDateRange')) {
+    <p class="error-message">To date must be later than from date.</p>
+  }
+
+  <button class="submit-button" type="submit" [disabled]="isSubmitting">
+    {{ isSubmitting ? 'Creating booking...' : 'Create Booking' }}
+  </button>
+</form>
