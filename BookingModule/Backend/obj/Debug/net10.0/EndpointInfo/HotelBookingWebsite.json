@@ -1,0 +1,95 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "HotelBookingWebsite",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Booking": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBookingDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBookingDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBookingDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Booking/user": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Booking/all": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateBookingDto": {
+        "type": "object",
+        "properties": {
+          "roomId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pricePerNight": {
+            "type": "number",
+            "format": "double"
+          },
+          "fromDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Booking"
+    }
+  ]
+}

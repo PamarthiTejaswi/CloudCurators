@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "HotelBookingWebsite.Controllers.BookingController",
+    "Method": "CreateBooking",
+    "RelativePath": "api/Booking",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "HotelBookingWebsite.DTOs.Bookings.CreateBookingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelBookingWebsite.Controllers.BookingController",
+    "Method": "GetAllBookings",
+    "RelativePath": "api/Booking/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelBookingWebsite.Controllers.BookingController",
+    "Method": "GetUserBookings",
+    "RelativePath": "api/Booking/user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
