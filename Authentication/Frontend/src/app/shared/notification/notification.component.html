@@ -1,0 +1,17 @@
+<div class="notifications-container">
+  <div
+    *ngFor="let notif of notifications"
+    [class]="'notification ' + getNotificationClass(notif.type)"
+    (click)="removeNotification(notif.id)"
+  >
+    <span class="notification-icon">{{ getIcon(notif.type) }}</span>
+    <span class="notification-message">{{ notif.message }}</span>
+    <button
+      class="notification-close"
+      (click)="removeNotification(notif.id); $event.stopPropagation()"
+    >
+      X
+    </button>
+  </div>
+</div>
+

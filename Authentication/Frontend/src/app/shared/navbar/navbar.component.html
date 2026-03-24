@@ -1,0 +1,55 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo" (click)="navigateToDashboard()" style="cursor: pointer;">
+      <span class="logo-icon">&#x1F3E8;</span>
+      <span class="logo-text">HotelHub</span>
+    </div>
+
+    <div class="nav-menu">
+      <a href="#" class="nav-link">Explore</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Support</a>
+    </div>
+
+    <div class="user-section">
+      <div class="user-button" (click)="toggleUserMenu()">
+        <span class="user-icon">&#x1F464;</span>
+        <span class="user-name">{{ getCurrentUser()?.name || getCurrentUser()?.email }}</span>
+        <span class="menu-icon">&#9662;</span>
+      </div>
+
+      <div class="user-menu" *ngIf="showUserMenu">
+        <div class="user-info">
+          <p class="user-email">{{ getCurrentUser()?.email }}</p>
+          <span class="user-role" [class.admin]="isAdmin()">
+            {{ getCurrentUser()?.role }}
+          </span>
+        </div>
+
+        <div class="menu-divider"></div>
+
+        <button class="menu-item" (click)="navigateToDashboard()" *ngIf="!isAdmin()">
+          <span class="item-icon">&#x1F3E8;</span>
+          <span>Browse Hotels</span>
+        </button>
+
+        <button class="menu-item" (click)="navigateToAdmin()" *ngIf="isAdmin()">
+          <span class="item-icon">&#9881;</span>
+          <span>Admin Portal</span>
+        </button>
+
+        <button class="menu-item settings">
+          <span class="item-icon">&#9881;</span>
+          <span>Settings</span>
+        </button>
+
+        <div class="menu-divider"></div>
+
+        <button class="menu-item logout" (click)="logout()">
+          <span class="item-icon">&#x1F6AA;</span>
+          <span>Logout</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
