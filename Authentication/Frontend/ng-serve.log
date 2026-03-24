@@ -1,0 +1,1449 @@
+
+> hotel-booking-ui2@0.0.0 start
+> ng serve
+
+[33m>[39m Building...
+[32m√[39m Building...
+[35mBrowser bundles[39m     
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.js[39m             [2m | [22m[2mmain[22m            [2m | [22m[36m313.98 kB[39m[2m | [22m
+[32mstyles.css[39m          [2m | [22m[2mstyles[22m          [2m | [22m [36m95 bytes[39m[2m | [22m
+
+[1m [22m                   [2m | [22m[1mInitial total[22m   [2m | [22m[1m314.07 kB[22m
+
+
+[35mServer bundles[39m      
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m     [2m | [22m[2mmain.server[22m     [2m | [22m[36m315.54 kB[39m[2m | [22m
+[32mserver.mjs[39m          [2m | [22m[2mserver[22m          [2m | [22m  [36m1.84 kB[39m[2m | [22m
+[32mpolyfills.server.mjs[39m[2m | [22m[2mpolyfills.server[22m[2m | [22m[36m268 bytes[39m[2m | [22m
+
+Application bundle generation complete. [6.756 seconds] - 2026-03-24T11:54:54.632Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m4200[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33mNG02801: Angular detected that `HttpClient` is not configured to use `fetch` APIs. It's strongly recommended to enable `fetch` for applications that use Server-Side Rendering for better performance and compatibility. To enable `fetch`, add the `withFetch()` to the `provideHttpClient()` call at the root of the application.[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [1.724 seconds] - 2026-03-24T12:03:27.867Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'notificationService' does not exist on type 'AuthService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/services/auth.service.ts:63:13:
+[37m      63 │         this.[32mnotificationService[37m.info(typeof response === 'string'...
+         ╵              [32m~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m     
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.js[39m             [2m | [22m[2mmain[22m            [2m | [22m[36m314.18 kB[39m[2m | [22m
+[32mstyles.css[39m          [2m | [22m[2mstyles[22m          [2m | [22m [36m95 bytes[39m[2m | [22m
+
+[1m [22m                   [2m | [22m[1mInitial total[22m   [2m | [22m[1m314.27 kB[22m
+
+
+[35mServer bundles[39m      
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m     [2m | [22m[2mmain.server[22m     [2m | [22m[36m315.74 kB[39m[2m | [22m
+[32mserver.mjs[39m          [2m | [22m[2mserver[22m          [2m | [22m  [36m1.84 kB[39m[2m | [22m
+[32mpolyfills.server.mjs[39m[2m | [22m[2mpolyfills.server[22m[2m | [22m[36m268 bytes[39m[2m | [22m
+
+Application bundle generation complete. [0.956 seconds] - 2026-03-24T12:03:31.533Z
+
+Page reload sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.629 seconds] - 2026-03-24T12:03:36.759Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:276:11:
+[37m      276 │       user.[32musername[37m.toLowerCase().includes(query) ||
+          ╵            [32m~~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.543 seconds] - 2026-03-24T12:03:43.624Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:130:36:
+[37m      130 │ ...Service.updateHotel([32mthis.editingHotel()!.id[37m, request).subscribe({
+          ╵                        [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:276:11:
+[37m      276 │       user.[32musername[37m.toLowerCase().includes(query) ||
+          ╵            [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.490 seconds] - 2026-03-24T12:03:52.085Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:130:36:
+[37m      130 │ ...Service.updateHotel([32mthis.editingHotel()!.id[37m, request).subscribe({
+          ╵                        [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:43:
+[37m      199 │ ...ities = Array.isArray(room.[32mamenities[37m) ? room.amenities.join(',...
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:61:
+[37m      199 │ ...ray(room.amenities) ? room.[32mamenities[37m.join(', ') : room.amenities;
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:89:
+[37m      199 │ ...ray(room.amenities) ? room.amenities.join(', ') : room.[32mamenities[37m;
+          ╵                                                           [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:224:34:
+[37m      224 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:276:11:
+[37m      276 │       user.[32musername[37m.toLowerCase().includes(query) ||
+          ╵            [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.399 seconds] - 2026-03-24T12:04:02.791Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:152:36:
+[37m      152 │       this.hotelService.deleteHotel([32mid[37m).subscribe({
+          ╵                                     [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:43:
+[37m      199 │ ...ities = Array.isArray(room.[32mamenities[37m) ? room.amenities.join(',...
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:61:
+[37m      199 │ ...ray(room.amenities) ? room.[32mamenities[37m.join(', ') : room.amenities;
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:89:
+[37m      199 │ ...ray(room.amenities) ? room.amenities.join(', ') : room.[32mamenities[37m;
+          ╵                                                           [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:224:34:
+[37m      224 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:276:11:
+[37m      276 │       user.[32musername[37m.toLowerCase().includes(query) ||
+          ╵            [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.561 seconds] - 2026-03-24T12:04:14.803Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:152:36:
+[37m      152 │       this.hotelService.deleteHotel([32mid[37m).subscribe({
+          ╵                                     [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:184:37:
+[37m      184 │     this.roomService.getRoomsByHotel([32mhotelId[37m).subscribe({
+          ╵                                      [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:43:
+[37m      199 │ ...ities = Array.isArray(room.[32mamenities[37m) ? room.amenities.join(',...
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:61:
+[37m      199 │ ...ray(room.amenities) ? room.[32mamenities[37m.join(', ') : room.amenities;
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:89:
+[37m      199 │ ...ray(room.amenities) ? room.amenities.join(', ') : room.[32mamenities[37m;
+          ╵                                                           [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:224:34:
+[37m      224 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:247:34:
+[37m      247 │       this.roomService.deleteRoom([32mid[37m).subscribe({
+          ╵                                   [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:276:11:
+[37m      276 │       user.[32musername[37m.toLowerCase().includes(query) ||
+          ╵            [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.381 seconds] - 2026-03-24T12:04:22.025Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:152:36:
+[37m      152 │       this.hotelService.deleteHotel([32mid[37m).subscribe({
+          ╵                                     [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:184:37:
+[37m      184 │     this.roomService.getRoomsByHotel([32mhotelId[37m).subscribe({
+          ╵                                      [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:43:
+[37m      199 │ ...ities = Array.isArray(room.[32mamenities[37m) ? room.amenities.join(',...
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:61:
+[37m      199 │ ...ray(room.amenities) ? room.[32mamenities[37m.join(', ') : room.amenities;
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:89:
+[37m      199 │ ...ray(room.amenities) ? room.amenities.join(', ') : room.[32mamenities[37m;
+          ╵                                                           [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:224:34:
+[37m      224 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:247:34:
+[37m      247 │       this.roomService.deleteRoom([32mid[37m).subscribe({
+          ╵                                   [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:276:11:
+[37m      276 │       user.[32musername[37m.toLowerCase().includes(query) ||
+          ╵            [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:284:34:
+[37m      284 │       this.userService.deleteUser([32mid[37m).subscribe({
+          ╵                                   [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.957 seconds] - 2026-03-24T12:04:30.980Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:152:36:
+[37m      152 │       this.hotelService.deleteHotel([32mid[37m).subscribe({
+          ╵                                     [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:184:37:
+[37m      184 │     this.roomService.getRoomsByHotel([32mhotelId[37m).subscribe({
+          ╵                                      [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:43:
+[37m      199 │ ...ities = Array.isArray(room.[32mamenities[37m) ? room.amenities.join(',...
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:61:
+[37m      199 │ ...ray(room.amenities) ? room.[32mamenities[37m.join(', ') : room.amenities;
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:89:
+[37m      199 │ ...ray(room.amenities) ? room.amenities.join(', ') : room.[32mamenities[37m;
+          ╵                                                           [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:224:34:
+[37m      224 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:247:34:
+[37m      247 │       this.roomService.deleteRoom([32mid[37m).subscribe({
+          ╵                                   [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:276:11:
+[37m      276 │       user.[32musername[37m.toLowerCase().includes(query) ||
+          ╵            [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:284:34:
+[37m      284 │       this.userService.deleteUser([32mid[37m).subscribe({
+          ╵                                   [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.409 seconds] - 2026-03-24T12:04:37.548Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:152:36:
+[37m      152 │       this.hotelService.deleteHotel([32mid[37m).subscribe({
+          ╵                                     [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:184:37:
+[37m      184 │     this.roomService.getRoomsByHotel([32mhotelId[37m).subscribe({
+          ╵                                      [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:43:
+[37m      199 │ ...ities = Array.isArray(room.[32mamenities[37m) ? room.amenities.join(',...
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:61:
+[37m      199 │ ...ray(room.amenities) ? room.[32mamenities[37m.join(', ') : room.amenities;
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'amenities' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:199:89:
+[37m      199 │ ...ray(room.amenities) ? room.amenities.join(', ') : room.[32mamenities[37m;
+          ╵                                                           [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:224:34:
+[37m      224 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:247:34:
+[37m      247 │       this.roomService.deleteRoom([32mid[37m).subscribe({
+          ╵                                   [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:276:11:
+[37m      276 │       user.[32musername[37m.toLowerCase().includes(query) ||
+          ╵            [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string' is not assignable to parameter of type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:284:34:
+[37m      284 │       this.userService.deleteUser([32mid[37m).subscribe({
+          ╵                                   [32m~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [1.623 seconds] - 2026-03-24T12:05:15.468Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:56:27:
+[37m      56 │               <td>{{ hotel.[32mcity[37m }}, {{ hotel.country }}</td>
+         ╵                            [32m~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:56:45:
+[37m      56 │               <td>{{ hotel.city }}, {{ hotel.[32mcountry[37m }}</td>
+         ╵                                              [32m~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'roomNumber' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:171:26:
+[37m      171 │               <td>{{ room.[32mroomNumber[37m }}</td>
+          ╵                           [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'type' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:172:26:
+[37m      172 │               <td>{{ room.[32mtype[37m }}</td>
+          ╵                           [32m~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'capacity' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:173:26:
+[37m      173 │               <td>{{ room.[32mcapacity[37m }} Guest(s)</td>
+          ╵                           [32m~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'price' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:174:27:
+[37m      174 │               <td>${{ room.[32mprice[37m }}</td>
+          ╵                            [32m~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isAvailable' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:176:61:
+[37m      176 │ ...       <span class="status" [class.available]="room.[32misAvailable[37m">
+          ╵                                                        [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isAvailable' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:177:26:
+[37m      177 │                   {{ room.[32misAvailable[37m ? 'Available' : 'Occupied' }}
+          ╵                           [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:280:26:
+[37m      280 │               <td>{{ user.[32musername[37m }}</td>
+          ╵                           [32m~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:289:68:
+[37m      289 │ ...ete" (click)="deleteUser(user.[32mid[37m)" [disabled]="user.role === '...
+          ╵                                  [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:205:34:
+[37m      205 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [1.349 seconds] - 2026-03-24T12:05:47.193Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'roomNumber' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:148:26:
+[37m      148 │               <td>{{ room.[32mroomNumber[37m }}</td>
+          ╵                           [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'type' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:149:26:
+[37m      149 │               <td>{{ room.[32mtype[37m }}</td>
+          ╵                           [32m~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'capacity' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:150:26:
+[37m      150 │               <td>{{ room.[32mcapacity[37m }} Guest(s)</td>
+          ╵                           [32m~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'price' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:151:27:
+[37m      151 │               <td>${{ room.[32mprice[37m }}</td>
+          ╵                            [32m~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isAvailable' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:153:61:
+[37m      153 │ ...       <span class="status" [class.available]="room.[32misAvailable[37m">
+          ╵                                                        [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isAvailable' does not exist on type 'Room'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:154:26:
+[37m      154 │                   {{ room.[32misAvailable[37m ? 'Available' : 'Occupied' }}
+          ╵                           [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:257:26:
+[37m      257 │               <td>{{ user.[32musername[37m }}</td>
+          ╵                           [32m~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:266:68:
+[37m      266 │ ...ete" (click)="deleteUser(user.[32mid[37m)" [disabled]="user.role === '...
+          ╵                                  [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:205:34:
+[37m      205 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [1.543 seconds] - 2026-03-24T12:06:13.819Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'username' does not exist on type 'User'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:233:26:
+[37m      233 │               <td>{{ user.[32musername[37m }}</td>
+          ╵                           [32m~~~~~~~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:242:68:
+[37m      242 │ ...ete" (click)="deleteUser(user.[32mid[37m)" [disabled]="user.role === '...
+          ╵                                  [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:205:34:
+[37m      205 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [1.167 seconds] - 2026-03-24T12:06:22.292Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:236:68:
+[37m      236 │ ...        <button class="btn-delete" (click)="deleteUser(user.[32mid[37m)">
+          ╵                                                                [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:205:34:
+[37m      205 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:70:12:
+[37m      70 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:71:12:
+[37m      71 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.912 seconds] - 2026-03-24T12:06:30.811Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:236:68:
+[37m      236 │ ...        <button class="btn-delete" (click)="deleteUser(user.[32mid[37m)">
+          ╵                                                                [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:205:34:
+[37m      205 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:48:53:
+[37m      48 │ ...otel-location">&#x1F4CD; {{ hotel.[32mcity[37m }}, {{ hotel.country }}</p>
+         ╵                                      [32m~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:48:71:
+[37m      48 │ ...otel-location">&#x1F4CD; {{ hotel.city }}, {{ hotel.[32mcountry[37m }}</p>
+         ╵                                                        [32m~~~~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:52:15:
+[37m      52 │             {{ [32mi < hotel.rating[37m ? '*' : '-' }}
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:88:60:
+[37m      88 │ ...&#x1F4CD; {{ selectedHotel()?.[32mcity[37m }}, {{ selectedHotel()?.coun...
+         ╵                                  [32m~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:88:89:
+[37m      88 │ ...D; {{ selectedHotel()?.city }}, {{ selectedHotel()?.[32mcountry[37m }}</p>
+         ╵                                                        [32m~~~~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'address' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:103:29:
+[37m      103 │       <p>{{ selectedHotel()?.[32maddress[37m }}</p>
+          ╵                              [32m~~~~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:79:12:
+[37m      79 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:80:12:
+[37m      80 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.623 seconds] - 2026-03-24T12:06:50.778Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:236:68:
+[37m      236 │ ...        <button class="btn-delete" (click)="deleteUser(user.[32mid[37m)">
+          ╵                                                                [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:205:34:
+[37m      205 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'address' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:85:29:
+[37m      85 │       <p>{{ selectedHotel()?.[32maddress[37m }}</p>
+         ╵                              [32m~~~~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'city' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:79:12:
+[37m      79 │       hotel.[32mcity[37m.toLowerCase().includes(query) ||
+         ╵             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'country' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:80:12:
+[37m      80 │       hotel.[32mcountry[37m.toLowerCase().includes(query)
+         ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.631 seconds] - 2026-03-24T12:06:56.489Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:236:68:
+[37m      236 │ ...        <button class="btn-delete" (click)="deleteUser(user.[32mid[37m)">
+          ╵                                                                [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'number' is not assignable to parameter of type 'string'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:205:34:
+[37m      205 │ ...omService.updateRoom([32mthis.editingRoom()!.id[37m, request).subscribe({
+          ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'address' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:85:29:
+[37m      85 │       <p>{{ selectedHotel()?.[32maddress[37m }}</p>
+         ╵                              [32m~~~~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.540 seconds] - 2026-03-24T12:07:11.645Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:236:68:
+[37m      236 │ ...        <button class="btn-delete" (click)="deleteUser(user.[32mid[37m)">
+          ╵                                                                [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'address' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:85:29:
+[37m      85 │       <p>{{ selectedHotel()?.[32maddress[37m }}</p>
+         ╵                              [32m~~~~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.454 seconds] - 2026-03-24T12:07:19.570Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:236:68:
+[37m      236 │ ...        <button class="btn-delete" (click)="deleteUser(user.[32mid[37m)">
+          ╵                                                                [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'address' does not exist on type 'Hotel'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/user/hotels-list/hotels-list.component.html:85:29:
+[37m      85 │       <p>{{ selectedHotel()?.[32maddress[37m }}</p>
+         ╵                              [32m~~~~~~~[0m
+
+  Error occurs in the template of component HotelsListComponent.
+
+    src/app/features/user/hotels-list/hotels-list.component.ts:12:15:
+[37m      12 │   templateUrl: [32m'./hotels-list.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.468 seconds] - 2026-03-24T12:08:13.003Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type 'string | number' is not assignable to parameter of type 'number'.
+  Type 'string' is not assignable to type 'number'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/admin/admin-portal/admin-portal.component.html:236:68:
+[37m      236 │ ...        <button class="btn-delete" (click)="deleteUser(user.[32mid[37m)">
+          ╵                                                                [32m~~[0m
+
+  Error occurs in the template of component AdminPortalComponent.
+
+    src/app/features/admin/admin-portal/admin-portal.component.ts:14:15:
+[37m      14 │   templateUrl: [32m'./admin-portal.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m     
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.js[39m             [2m | [22m[2mmain[22m            [2m | [22m[36m303.98 kB[39m[2m | [22m
+[32mstyles.css[39m          [2m | [22m[2mstyles[22m          [2m | [22m [36m95 bytes[39m[2m | [22m
+
+[1m [22m                   [2m | [22m[1mInitial total[22m   [2m | [22m[1m304.08 kB[22m
+
+
+[35mServer bundles[39m      
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m     [2m | [22m[2mmain.server[22m     [2m | [22m[36m305.54 kB[39m[2m | [22m
+[32mserver.mjs[39m          [2m | [22m[2mserver[22m          [2m | [22m  [36m1.84 kB[39m[2m | [22m
+[32mpolyfills.server.mjs[39m[2m | [22m[2mpolyfills.server[22m[2m | [22m[36m268 bytes[39m[2m | [22m
+
+Application bundle generation complete. [1.593 seconds] - 2026-03-24T12:08:40.679Z
+
+Page reload sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m304.40 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m305.97 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.994 seconds] - 2026-03-24T12:09:19.212Z
+
+Page reload sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m316.94 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m318.77 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.442 seconds] - 2026-03-24T12:09:44.241Z
+
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: NotificationComponent is not used within the template of App[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:7:26:
+[37m      7 │   imports: [RouterOutlet, [32mNotificationComponent[37m],
+        ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+Page reload sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m317.00 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m318.83 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.250 seconds] - 2026-03-24T12:09:52.708Z
+
+Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m317.62 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m319.45 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.636 seconds] - 2026-03-24T12:19:58.620Z
+
+Page reload sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m325.90 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m327.73 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.798 seconds] - 2026-03-24T12:25:03.793Z
+
+Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m [2m | [22m [1mRaw size[22m
+[32mstyles.css[39m         [2m | [22m[2mstyles[22m[2m | [22m[36m328 bytes[39m[2m | [22m
+
+Application bundle generation complete. [0.023 seconds] - 2026-03-24T12:26:33.633Z
+
+Stylesheet update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m329.26 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m331.09 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.646 seconds] - 2026-03-24T12:26:48.715Z
+
+Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m332.92 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m334.75 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.769 seconds] - 2026-03-24T12:27:04.761Z
+
+Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m337.04 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m338.87 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.502 seconds] - 2026-03-24T12:27:21.676Z
+
+Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m342.29 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m344.12 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.629 seconds] - 2026-03-24T12:27:42.854Z
+
+Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m345.03 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m346.86 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.628 seconds] - 2026-03-24T12:27:56.537Z
+
+Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m346.83 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m348.66 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.344 seconds] - 2026-03-24T12:28:05.302Z
+
+Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m     
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.js[39m             [2m | [22m[2mmain[22m            [2m | [22m[36m346.83 kB[39m[2m | [22m
+[32mstyles.css[39m          [2m | [22m[2mstyles[22m          [2m | [22m[36m328 bytes[39m[2m | [22m
+
+[1m [22m                   [2m | [22m[1mInitial total[22m   [2m | [22m[1m347.16 kB[22m
+
+
+[35mServer bundles[39m      
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m     [2m | [22m[2mmain.server[22m     [2m | [22m[36m348.66 kB[39m[2m | [22m
+[32mserver.mjs[39m          [2m | [22m[2mserver[22m          [2m | [22m  [36m1.84 kB[39m[2m | [22m
+[32mpolyfills.server.mjs[39m[2m | [22m[2mpolyfills.server[22m[2m | [22m[36m268 bytes[39m[2m | [22m
+
+Application bundle generation complete. [0.860 seconds] - 2026-03-24T12:33:36.721Z
+
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m347.32 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m349.15 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.722 seconds] - 2026-03-24T12:33:40.762Z
+
+Page reload sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m347.35 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m349.18 kB[39m[2m | [22m
+
+Application bundle generation complete. [1.735 seconds] - 2026-03-24T12:33:46.075Z
+
+Page reload sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+[35mBrowser bundles[39m    
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m       [2m | [22m[36m347.47 kB[39m[2m | [22m
+
+
+[35mServer bundles[39m     
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m      [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m    [2m | [22m[2mmain.server[22m[2m | [22m[36m349.30 kB[39m[2m | [22m
+
+Application bundle generation complete. [2.119 seconds] - 2026-03-24T12:37:31.465Z
+
+Page reload sent to client(s).
